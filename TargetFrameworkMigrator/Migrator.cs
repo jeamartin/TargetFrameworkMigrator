@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2013 Pavel Samokha
+// Copyright (c) 2013 Pavel Samokha
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -151,14 +151,14 @@ namespace VSChangeTargetFrameworkExtension
                 Name = p.Name,
                 DteProject = p,
             };
-        if (p.Properties == null) return projectModel;
-
-        // not applicable for current project
-        if (p.Properties.Item("TargetFramework") == null ||
-            p.Properties.Item("TargetFrameworkMoniker") == null) return projectModel;
 
         try
         {
+            if (p.Properties == null) return projectModel;
+                // not applicable for current project
+            if (p?.Properties?.Item("TargetFramework") == null ||
+                p?.Properties?.Item("TargetFrameworkMoniker") == null) return projectModel;
+
             var frameworkModel = new FrameworkModel
             {
                 Id = (uint)p.Properties.Item("TargetFramework").Value,
@@ -174,8 +174,12 @@ namespace VSChangeTargetFrameworkExtension
         {
             Debug.WriteLine("InvalidCastException on " + projectModel + e);
         }
-        return projectModel;
-    }
+        catch (Exception e)
+        {
+            Debug.WriteLine("Exception on " + projectModel + e);
+        }
+         return projectModel;
+   }
 
     async void Update()
     {
