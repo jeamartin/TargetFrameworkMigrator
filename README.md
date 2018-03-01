@@ -9,7 +9,7 @@ If you have solution with many projects and want to migrate to new version of .N
 
 Features:
 
-* Support .Net Frameworks 2.0-4.6
+* Support .Net Frameworks 2.0-4.7.1
 * Support solution folders 
 
 Available through Tools -> Target Framework Migrator
@@ -27,4 +27,4 @@ Where to get Id for new framework? I get it via runtime (change one project's fr
 How to debug visual studio extension
 ------------------------------------
 
-Set "Run external program" in Debug to Visual Studio devenv.exe (e.g. C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe) and command line arguments to "/rootsuffix Exp"
+Set "Run external program" in Debug to Visual Studio devenv.exe (e.g. C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe) and command line arguments to "/rootsuffix Exp" (you can debug only the same version with itself)
