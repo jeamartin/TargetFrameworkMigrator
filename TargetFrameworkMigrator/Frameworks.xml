@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Frameworks>
+  <Framework Id="262663" Name=".NETFramework,Version=v4.7.2"/>
   <Framework Id="262407" Name=".NETFramework,Version=v4.7.1"/>
   <Framework Id="262151" Name=".NETFramework,Version=v4.7"/>
   <Framework Id="262662" Name=".NETFramework,Version=v4.6.2"/>
@@ -13,5 +14,5 @@
   <Framework Id="196613" Name=".NETFramework,Version=v3.5"/>
   <Framework Id="196613" Name=".NETFramework,Version=v3.5,Profile=Client"/>
   <Framework Id="196608" Name=".NETFramework,Version=v3.0"/>
-  <Framework Id="131072" Name=".NETFramework,Version=v2.0"/>
+  <Framework Id="131072" Name=".NETFramework,Version=v2.0"/>       
 </Frameworks>
